@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --main: #ecf0f3;
+    --red: #ff014f;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.whole-bg{
+    background-color: var(--main);
+}
+/* NAVBAR -------------- */
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid rgb(216, 212, 212);
+    width: 100vw;
+}
+.img-nav-bar{
+    width: fit-content;
+    display: flex;  
+    align-items: center;
+    gap: 10px;
+}
+.img-nav-bar img{
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid gray;
+}
+.img-nav-bar p{
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.nav-items{
+    display: flex;
+    gap: 2rem;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-links p{
+    font-size: 14px;
+}
+.icons-navbar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.icons-link a{
+    background-color: var(--main);
+    margin: 9px;
+    padding: 12px 20px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+}
+.contact-navbar button{
+    padding: 17px 19px;
+    border-radius: 6px;
+    background-color: var(--main);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border: none;
+    color: var(--red);
+    font-weight: medium;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+.contact-navbar button:hover{
+    transform: translateY(-4px);
+    background: linear-gradient(45deg, purple ,var(--red));
+    color: white;
+}
+.hamburger, .cancel-button{
+    color: var(--red);
+    background-color: var(--main);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border-radius: 50%;
+    padding: 9px 15px;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (max-width:1011px){
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+@media screen and (max-width:783px){
+    .icons-link , .contact-navbar{
+        display: none;
+    }
+}
+/* BODY SECTON ----------------------- */
