@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 :root{
     --main: #ecf0f3;
@@ -23,7 +25,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 38px;
     border-bottom: 2px solid rgb(216, 212, 212);
     width: 100vw;
 }
@@ -107,3 +109,112 @@ a{
     }
 }
 /* BODY SECTON ----------------------- */
+/* hero section */
+.hero-section{
+    padding-right: 2rem;
+    padding-left:  2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.first-hero-section{
+    padding-top: 6rem;
+    margin-bottom: 1.6rem;
+}
+.first-hero-section b{
+    color: var(--red);
+}
+.first-hero-section p{
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.first-hero-section span{
+    font-weight: 700;
+}
+.first-hero-section p:nth-child(1){
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif;
+}
+.descriptions{
+    margin-bottom: 8rem;
+}
+.descriptions p{
+    max-width: 700px;
+    line-height: 1.5;
+}
+.img-hero{
+    padding-right: 3rem;
+}
+.img-hero img{
+    margin-top: -2rem;
+}
+.skill-contact{
+    display: flex;
+    gap: 10rem;
+}
+.skill-contact p{
+    margin-bottom: 2.2rem;
+}
+.skill-contact a{
+    padding: 1.1rem 1.5rem;
+    background-color: var(--main);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border-radius: 6px;
+}
+.icons-hero p{
+    background-color: var(--main);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    padding: 4px;
+    border-radius: 6px;
+}
+.icons-hero{
+    display: flex;
+    gap: 1.5rem;
+}
+.stick-down-to-up{
+    position: fixed;
+    bottom: 1rem;
+    left: 2rem;
+    color: var(--red);
+    font-weight: 300;
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    padding: 15px;
+    border-radius: 50%;
+}
+@media screen and (max-width: 1195px){
+    .hero-section{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+    .nav-bar{
+        padding: 15px 19px;
+    }
+    .descriptions p{
+        max-width: inherit;
+    }
+    .img-hero{
+        text-align: center;
+
+    }
+    .img-hero img{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px){
+    .skill-contact{
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .first-hero-section p{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .first-hero-section p{
+        font-size: 1.5rem;
+    }
+}
