@@ -17,6 +17,8 @@ html{
     --red: #ff014f;
     --gray: #e5e5e5;
     --black: #3c3e41;
+    --lightmain: #f3f6f7;
+    --lightgray: #c4cfde;
 }
 a{
     text-decoration: none;
@@ -442,6 +444,8 @@ a{
     padding-right: 2rem;
     padding-left:  2rem;
     padding-top: 6rem;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 5rem;
 }
 .grid-portfolio{
     display: grid;
@@ -492,7 +496,7 @@ a{
     cursor: pointer;
 }
 .likes:hover{
-    background-color: rgb(190, 185, 185);
+    background-color: var(--lightgray);
 }
 .external-main{
     font-size: 14px;
@@ -554,8 +558,177 @@ a{
     }
 }
 
-
-/* random classes for js */
-.hide{
-    display: none;
+/* testimonials */
+.testimonial{
+    padding-right: 8rem;
+    padding-left:  8rem;
+    padding-top: 6rem;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 5rem;
+}
+.testimony{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+.img-testimonials{
+    width: 35%;
+    padding: 1.9rem;
+    background: linear-gradient(to right ,var(--main) , var(--lightmain));
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border-radius: 10px;
+    position: relative;
+}
+.img-in-testimony{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.7rem;
+}
+.img-in-testimony img{
+    transition: all 0.3s;
+}
+.img-in-testimony img:hover{
+    transform: scale(1.2);
+}
+.grade{
+    font-size: 14px;
+    color: var(--red);
+    font-weight: 500;
+    font-family: sans-serif;
+    margin-bottom: 1.3rem;
+}
+.name{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+.job{
+    font-size: 15px;
+}
+.text-testimonial{
+    width: 65%;
+    position: relative;
+}
+.icon-testimonial{
+    color: gray;
+}
+.icon-testimonial :nth-child(2){
+    margin-left: -3rem;
+}
+.control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.control-main{
+    display: flex;
+    gap: 20px;
+}
+.control-main div{
+    background: linear-gradient(to right, var(--main), var(--lightmain));
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    padding: 12px 15px;
+    color: var(--red);
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+.control-main div:hover{
+    background: linear-gradient(to right, purple, var(--red));
+    color: white;
+}
+.speech-container{
+    padding: 3rem 2rem;
+    background: linear-gradient(to right, var(--main), var(--lightmain));
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border-radius: 10px;
+}
+.project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 1.5rem;
+}
+.ratings{
+    background: linear-gradient(to right, var(--main), var(--lightmain));
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    padding: 17px;
+    display: flex;
+    gap: 3px;
+    border-radius: 6px;
+}
+.ratings i{
+    font-size: 10px;
+    color: gold;
+}
+.project-main{
+    line-height: 2;
+}
+.speech{
+    padding-top: 2rem;
+}
+.speech p{
+    line-height: 1.5;
+    font-size: 18px;
+}
+.controller{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.controller p{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--lightgray);
+}
+.bridge{
+    position: absolute;
+    width: 64px;
+    height: 6px;
+    background-color: var(--lightgray);
+    top: 50%;
+    left: 32%;
+}
+@media screen and (max-width:1176px){
+    .control , .bridge{
+        display: none;
+    }
+    .testimony{
+        flex-direction: column;
+    }
+    .img-testimonials , .text-testimonial{
+        width: 100%;
+    }
+    .testimonial{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 688px){
+    .project{
+        flex-direction: column;
+        align-items: start;
+        gap: 25px;
+    }
+    .testimonial{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .img-testimonials{
+        padding: 1rem;
+    }
+    .speech-container{
+        padding: 1.5rem;
+    }
+}
+@media screen and (max-width:460px){
+    .project-main h2{
+        font-size: 20px;
+    }
 }
