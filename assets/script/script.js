@@ -8,30 +8,25 @@ let typed = new Typed(".auto-type" , {
 });
 
 let hamburger = document.querySelector(".hamburger")
-let cancelButton = document.querySelector(".cancel-button")
+let cancelSidebar = document.querySelector(".cancel-sidebar")
+let sidebar = document.querySelector(".sidebar")
+let overlay = document.querySelector(".overlay")
 
-function hamburgerDisplay(){
-    hamburger.classList.add('hide')
-    cancelButton.classList.add('show')
+
+// show sidebar
+function collapse(){
+    sidebar.classList.add('slide')
+    overlay.classList.add('show-overlay')
 }
-hamburger.addEventListener("click" , hamburgerDisplay)
+hamburger.addEventListener("click" , collapse)
 
-
-
-function cancelDisplay(){
-    hamburger.classList.add('hide')
-    cancelButton.classList.remove('hide')
-    cancelButton.classList.add('show')
+// hide sidebar
+function cancel(){
+    sidebar.classList.remove('slide')
+    overlay.classList.remove('show-overlay')
 }
-cancelButton.addEventListener("click" , cancelDisplay)
-// hamburger click
-// hamburger.onclick = function(){
-//     hamburger.classList.add('hide')
-//     cancelButton.classList.add('show')
-// }
+cancelSidebar.addEventListener("click" , cancel)
 
-// // cancel click
-// cancelButton.onclick = function(){
-//     cancelButton.classList.add('hide')
-//     hamburger.classList.remove('hide')
-// }
+// clicking overlay
+overlay.addEventListener("click" , cancel)
+
