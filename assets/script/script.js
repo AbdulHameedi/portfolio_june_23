@@ -13,32 +13,44 @@ let sidebar = document.querySelector(".sidebar")
 let overlay = document.querySelector(".overlay")
 let testimony = document.querySelector(".testimony")
 let names = document.querySelector(".name")
+let job = document.querySelector(".job")
+let grade = document.querySelector(".grade")
+let project = document.querySelector(".work")
+let speech = document.querySelector(".speech")
+let image = document.querySelector(".img-for-testimonial")
 let forward = document.querySelector(".forward")
+let backward = document.querySelector(".backward")
+let one = document.querySelector(".one")
+let two = document.querySelector(".two")
+let three = document.querySelector(".three")
 let current = 0
 let testimonials = [
     {
         "id": "0",
-        "name": "Sanni Hammed",
-        "job": "Software Developer",
-        "grade": "Excellent",
-        "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
-        "project": "Team Collaboration - Software"
-    },
-    {
-        "id": "0",
         "name": "Abdulrahman Luqman",
         "job": "Software Developer",
-        "grade": "VERY GOOD",
+        "grade": "DERVAC LTD",
         "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
-        "project": "Team Collaboration - Software"
+        "project": "Team Collaboration - Software",
+        "image": "/assets/img/luqman.png"
     },
     {
-        "id": "0",
+        "id": "1",
         "name": "Anjorin Muhsin",
         "job": "Chief Technology Officer",
-        "grade": "Excellent",
+        "grade": "DERVAC LTD",
         "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
-        "project": "Top Notch Solution - Clients"
+        "project": "Top notch Solutions - Client",
+        "image": "/assets/img/anjorin.png"
+    },
+    {
+        "id": "1",
+        "name": "Abdulqoyum Aliy",
+        "job": "Software Developer",
+        "grade": "DERVAC LTD",
+        "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
+        "project": "Team Collaboration - Software",
+        "image": "/assets/img/aliy.png"
     },
 ]   
 
@@ -64,15 +76,55 @@ overlay.addEventListener("click" , cancel)
 
 
 // testimonials
-for(i in testimonials){
-    if(testimonials[i] === testimonials[current]){
-        names.innerHTML = testimonials[i].name
+    for(i in testimonials){
+        if(testimonials[i] === testimonials[0]){
+            names.innerHTML = testimonials[i].name
+            speech.innerHTML = testimonials[i].speech
+            job.innerHTML = testimonials[i].job
+            project.innerHTML = testimonials[i].project
+            image.setAttribute('src' , `${testimonials[i].image}`)
+            grade.innerHTML = testimonials[i].grade
+        }
     }
-    console.log(testimonials[i].name)
+
+
+// forward
+forward.addEventListener("click" , incCurrent)
+
+function incCurrent(){
+    for(i in testimonials){
+        if(testimonials[i] === testimonials[current]){
+            names.innerHTML = testimonials[i].name
+            speech.innerHTML = testimonials[i].speech
+            job.innerHTML = testimonials[i].job
+            project.innerHTML = testimonials[i].project
+            image.setAttribute('src' , `${testimonials[i].image}`)
+            grade.innerHTML = testimonials[i].grade
+        }
+       
+    }
+    if(current <= testimonials.length-1){
+        current = current+1
+    }   
 }
 
-forward.addEventListener("click" , incCurrent)
-function incCurrent(){
-    current = current+1
-    console.log(current)
+// backward
+backward.addEventListener("click" , decCurrent)
+
+function decCurrent(){
+    for(i in testimonials){
+        if(testimonials[i] === testimonials[current]){
+            names.innerHTML = testimonials[i].name
+            speech.innerHTML = testimonials[i].speech
+            job.innerHTML = testimonials[i].job
+            project.innerHTML = testimonials[i].project
+            image.setAttribute('src' , `${testimonials[i].image}`)
+            grade.innerHTML = testimonials[i].grade
+        }
+    }
+    if(current >= 1){
+        current = current-1
+        console.log(current)
+    }
 }
+

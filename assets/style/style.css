@@ -64,6 +64,12 @@ a{
 .nav-links p{
     font-size: 14px;
 }
+.nav-links a{
+    transition: all 0.3s;
+}
+.nav-links a:hover{
+    color: var(--red);
+}
 .icons-navbar{
     display: flex;
     align-items: center;
@@ -72,12 +78,12 @@ a{
 .icons-link a{
     background-color: var(--main);
     margin: 9px;
-    padding: 12px 20px;
+    padding: 15px 20px;
     border-radius: 50%;
     box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
 }
 .icons-link a:hover{
-    padding: 15px 20px;
+    padding: 17px 20px;
 }
 .contact-navbar button{
     padding: 17px 19px;
@@ -111,7 +117,7 @@ a{
 }
 
 
-@media screen and (max-width:1011px){
+@media screen and (max-width:1091px){
     .nav-links{
         display: none;
     }
@@ -185,6 +191,12 @@ a{
     padding-top: 2rem;
     font-size: 15px;
     margin-bottom: 4rem;
+}
+.icon-links-sidebar a{
+    transition: all 0.3s;
+}
+.icon-links-sidebar a:hover{
+    color: var(--red);
 }
 .foot-sidebar p{
     font-family: sans-serif;
@@ -306,6 +318,7 @@ a{
     box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
     padding: 13px 15px;
     border-radius: 50%;
+    z-index: 3;
 }
 .stick-down-to-up a{
     color: var(--red);
@@ -323,7 +336,7 @@ a{
         padding-left: 23px;
     }
     .nav-bar{
-        padding: 15px 19px;
+        padding: 15px 25px;
     }
     .descriptions p{
         max-width: inherit;
@@ -587,9 +600,13 @@ a{
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 1.7rem;
+    height: 250px;
 }
 .img-in-testimony img{
     transition: all 0.3s;
+    height: fit-content;
+    /* margin-top: -30px; */
+    overflow: hidden;
 }
 .img-in-testimony img:hover{
     transform: scale(1.2);
@@ -634,7 +651,7 @@ a{
     box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
     padding: 12px 15px;
     color: var(--red);
-    transition: all 0.3s;
+    transition: all 0.3s ease-out;
     border-radius: 6px;
 }
 .control-main div:hover{
