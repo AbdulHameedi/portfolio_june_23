@@ -26,7 +26,7 @@ let three = document.querySelector(".three")
 let current = 0
 let testimonials = [
     {
-        "id": "0",
+        "id": 0,
         "name": "Abdulrahman Luqman",
         "job": "Software Developer",
         "grade": "DERVAC LTD",
@@ -35,7 +35,7 @@ let testimonials = [
         "image": "/assets/img/luqman.png"
     },
     {
-        "id": "1",
+        "id": 1,
         "name": "Anjorin Muhsin",
         "job": "Chief Technology Officer",
         "grade": "DERVAC LTD",
@@ -44,7 +44,7 @@ let testimonials = [
         "image": "/assets/img/anjorin.png"
     },
     {
-        "id": "1",
+        "id": 2,
         "name": "Abdulqoyum Aliy",
         "job": "Software Developer",
         "grade": "DERVAC LTD",
@@ -72,21 +72,8 @@ cancelSidebar.addEventListener("click" , cancel)
 // clicking overlay
 overlay.addEventListener("click" , cancel)
 
+
 // for testimonials
-
-
-// testimonials
-    for(i in testimonials){
-        if(testimonials[i] === testimonials[0]){
-            names.innerHTML = testimonials[i].name
-            speech.innerHTML = testimonials[i].speech
-            job.innerHTML = testimonials[i].job
-            project.innerHTML = testimonials[i].project
-            image.setAttribute('src' , `${testimonials[i].image}`)
-            grade.innerHTML = testimonials[i].grade
-        }
-    }
-
 
 // forward
 forward.addEventListener("click" , incCurrent)
@@ -102,10 +89,21 @@ function incCurrent(){
             grade.innerHTML = testimonials[i].grade
         }
        
+        if(current == 0){
+            one.style.backgroundColor = 'red'
+            console.log(current)
+        }else if(current == 1){
+            two.style.backgroundColor = 'red'
+            one.style.backgroundColor = 'gray'
+        }else if(current == 2){
+            two.style.backgroundColor = 'gray'
+            three.style.backgroundColor = 'red'
+        }
     }
+
     if(current <= testimonials.length-1){
         current = current+1
-    }   
+    }
 }
 
 // backward
@@ -113,6 +111,7 @@ backward.addEventListener("click" , decCurrent)
 
 function decCurrent(){
     for(i in testimonials){
+      
         if(testimonials[i] === testimonials[current]){
             names.innerHTML = testimonials[i].name
             speech.innerHTML = testimonials[i].speech
@@ -121,10 +120,20 @@ function decCurrent(){
             image.setAttribute('src' , `${testimonials[i].image}`)
             grade.innerHTML = testimonials[i].grade
         }
+        if(current == 2){
+            two.style.backgroundColor = 'red'
+            three.style.backgroundColor = 'gray'
+        }else if(current == 1){
+            one.style.backgroundColor = 'red'
+            two.style.backgroundColor = 'gray'
+        }
+      
+     
     }
     if(current >= 1){
         current = current-1
         console.log(current)
-    }
+    }    
 }
+
 

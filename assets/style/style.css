@@ -704,6 +704,9 @@ a{
     border-radius: 50%;
     background-color: var(--lightgray);
 }
+.one{
+    background-color: var(--red);
+}
 .bridge{
     position: absolute;
     width: 64px;
