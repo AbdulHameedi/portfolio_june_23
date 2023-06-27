@@ -335,6 +335,7 @@ a{
         padding-right: 23px;
         padding-left: 23px;
     }
+    
     .nav-bar{
         padding: 15px 25px;
     }
@@ -343,7 +344,10 @@ a{
     }
     .img-hero{
         text-align: center;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0rem;
     }
     .img-hero img{
         width: 60%;
