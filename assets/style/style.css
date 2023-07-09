@@ -277,9 +277,22 @@ a{
 }
 .img-hero{
     padding-right: 3rem;
+    position: relative;
+}
+.bg-img{
+    background-color: var(--main);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    width: 430px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    border-radius: 7px;
 }
 .img-hero img{
     margin-top: -2rem;
+    position: relative;
+    z-index: 2;
 }
 .skill-contact{
     display: flex;
@@ -335,7 +348,7 @@ a{
         padding-right: 23px;
         padding-left: 23px;
     }
-    
+   
     .nav-bar{
         padding: 15px 25px;
     }
@@ -360,6 +373,9 @@ a{
     }
     .first-hero-section p{
         font-size: 2.5rem;
+    }
+    .bg-img{
+        height: 250px;
     }
 }
 @media screen and (max-width: 768px){
@@ -755,4 +771,95 @@ a{
     .project-main h2{
         font-size: 20px;
     }
+}
+
+/* resume */
+.resume{
+    padding-right: 2rem;
+    padding-left:  2rem;
+    padding-top: 6rem;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 5rem;
+}
+.heading-resume{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    background: linear-gradient(to left, rgb(252,252,253) , rgb(236,240,243));
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+.heading-resume p{
+    width: 25%;
+    padding: 40px 35px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.heading-resume p:hover{
+    border-radius: 12px;
+    background: linear-gradient(to right, #E9EDF0 , #F7F9FA);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    color: var(--red);
+}
+.active-resume{
+    border-radius: 12px;
+    background: linear-gradient(to right, #E9EDF0 , #F7F9FA);
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    color: var(--red);
+}
+.resume-details{
+    display: flex;
+}
+.details-heading{
+    margin-bottom: 3rem;
+}
+.details-heading p{
+    color: var(--red);
+    margin-bottom: 1.5rem;
+}
+.details-heading h1{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+@media screen and (max-width:940px){
+    .heading-resume{
+        flex-direction: column;
+    }
+    .heading-resume p{
+        width: 100%;
+        padding: 30px 35px;
+    }
+    .resume{
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+}
+.resume-content{
+    width: fit-content;
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    background: linear-gradient(to left, rgb(252,252,253) , rgb(236,240,243));
+    padding: 40px 35px;
+    border-radius: 12px;
+}
+.first-resume-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 2rem;
+}
+.resume-school{
+    line-height: 2;
+}
+.g-p{
+    color: var(--red);
+    background-color: white;
+    padding: 9px 17px;
+    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 14px;
 }
