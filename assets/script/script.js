@@ -23,6 +23,10 @@ let backward = document.querySelector(".backward")
 let one = document.querySelector(".one")
 let two = document.querySelector(".two")
 let three = document.querySelector(".three")
+let education = document.querySelector(".education")
+let profession = document.querySelector(".profession")
+let experience = document.querySelector(".experience")
+let interview = document.querySelector(".interview")
 let current = 0
 let testimonials = [
     {
@@ -137,3 +141,31 @@ function decCurrent(){
 }
 
 
+// for resume
+profession.onclick = function(){
+    profession.classList.add('active-resume')
+    education.classList.remove('active-resume')
+    interview.classList.remove('active-resume')
+    experience.classList.remove('active-resume')
+}
+
+education.onclick = function(){
+    education.classList.add('active-resume')
+    profession.classList.remove('active-resume')
+    interview.classList.remove('active-resume')
+    experience.classList.remove('active-resume')
+}
+
+experience.onclick = function(){
+    experience.classList.add('active-resume')
+    education.classList.remove('active-resume')
+    profession.classList.remove('active-resume')
+    interview.classList.remove('active-resume')
+}
+
+interview.onclick = function(){
+    interview.classList.add('active-resume')
+    education.classList.remove('active-resume')
+    profession.classList.remove('active-resume')
+    experience.classList.remove('active-resume')
+}
