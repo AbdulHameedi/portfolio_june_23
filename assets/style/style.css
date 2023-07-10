@@ -35,6 +35,10 @@ a{
     padding: 15px 38px;
     border-bottom: 2px solid var(--gray);
     width: 100vw;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    background-color: var(--main);
 }
 .img-nav-bar{
     width: fit-content;
@@ -50,7 +54,6 @@ a{
 .img-nav-bar p{
     text-transform: uppercase;
     font-weight: 600;
-
 }
 .nav-items{
     display: flex;
@@ -126,6 +129,15 @@ a{
     }
 
 }
+@media screen and (max-width: 573px){
+    .img-nav-bar p{
+        font-size: small;
+    }
+    .img-nav-bar img{
+        width: 55px;
+        height: 55px;
+    }
+}
 @media screen and (max-width:783px){
     .icons-link , .contact-navbar{
         display: none;
@@ -148,6 +160,7 @@ a{
     top: 0;
     bottom: 0;
     transition: left 0.6s;
+    z-index: 5;
 }
 /* js slide in */
 .slide{
@@ -231,6 +244,7 @@ a{
     background-color: black;
     opacity: 0.8;
     display: none;
+    z-index: 5;
 }
 
 /* js overlay */
@@ -240,6 +254,7 @@ a{
 /* BODY SECTON ----------------------- */
 /* hero section */
 .hero-section{
+    padding-top: 6rem;
     padding-right: 2rem;
     padding-left:  2rem;
     display: flex;
@@ -277,22 +292,11 @@ a{
 }
 .img-hero{
     padding-right: 3rem;
-    position: relative;
+
 }
-.bg-img{
-    background-color: var(--main);
-    box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
-    width: 430px;
-    height: 500px;
-    position: absolute;
-    bottom: 0;
-    right: 15px;
-    border-radius: 7px;
-}
+
 .img-hero img{
     margin-top: -2rem;
-    position: relative;
-    z-index: 2;
 }
 .skill-contact{
     display: flex;
@@ -348,7 +352,6 @@ a{
         padding-right: 23px;
         padding-left: 23px;
     }
-   
     .nav-bar{
         padding: 15px 25px;
     }
@@ -366,6 +369,7 @@ a{
         width: 60%;
     }
 }
+
 @media screen and (max-width: 768px){
     .skill-contact{
         flex-direction: column;
@@ -373,9 +377,6 @@ a{
     }
     .first-hero-section p{
         font-size: 2.5rem;
-    }
-    .bg-img{
-        height: 250px;
     }
 }
 @media screen and (max-width: 768px){
