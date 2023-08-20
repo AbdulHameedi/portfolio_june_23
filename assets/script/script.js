@@ -27,6 +27,8 @@ let education = document.querySelector(".education")
 let profession = document.querySelector(".profession")
 let experience = document.querySelector(".experience")
 let interview = document.querySelector(".interview")
+let detailsOne = document.querySelector(".details-one")
+let detailsTwo = document.querySelector(".details-two")
 let current = 0
 let testimonials = [
     {
@@ -142,11 +144,15 @@ function decCurrent(){
 
 
 // for resume
+detailsTwo.classList.add('for-resume')
+
 profession.onclick = function(){
     profession.classList.add('active-resume')
     education.classList.remove('active-resume')
     interview.classList.remove('active-resume')
     experience.classList.remove('active-resume')
+    detailsOne.classList.add('for-resume')
+    detailsTwo.classList.remove('for-resume')
 }
 
 education.onclick = function(){
@@ -154,6 +160,8 @@ education.onclick = function(){
     profession.classList.remove('active-resume')
     interview.classList.remove('active-resume')
     experience.classList.remove('active-resume')
+    detailsOne.classList.remove('for-resume')
+    detailsTwo.classList.add('for-resume')
 }
 
 experience.onclick = function(){
