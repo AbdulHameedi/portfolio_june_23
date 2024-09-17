@@ -33,19 +33,19 @@ let current = 0
 let testimonials = [
     {
         "id": 0,
-        "name": "Abdulrahman Luqman",
-        "job": "Software Developer",
-        "grade": "DERVAC LTD",
-        "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
-        "project": "Team Collaboration - Software",
-        "image": "/assets/img/luqman.png"
+        "name": "Ayomide Akanji",
+        "job": "Motion Designer",
+        "grade": "Teksight Edge, Nigeria",
+        "speech": "Working with Sanni was a nice experience. The entire process, from consultation to completion, was smooth. The final product exceeded my expectations, and we couldn't be happier. His attention to detail and dedication is unmatched",
+        "project": "Personal Portfolio - Web App",
+        "image": "/assets/img/azeem_pic.png"
     },
     {
         "id": 1,
         "name": "Anjorin Muhsin",
         "job": "Chief Technology Officer",
         "grade": "DERVAC LTD",
-        "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
+        "speech": "Sanni's work is professional. He turned our vision into reality with precision and creativity. Every feature we requested was delivered flawlessly. His professionalism and technical expertise made the entire project seamless and efficient",
         "project": "Top notch Solutions - Client",
         "image": "/assets/img/anjorin.png"
     },
@@ -53,8 +53,8 @@ let testimonials = [
         "id": 2,
         "name": "Abdulqoyum Aliy",
         "job": "Software Developer",
-        "grade": "DERVAC LTD",
-        "speech": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, similique assumenda quis eligendi, aliquam optio voluptate at animi facere incidunt tempore minima ipsa vero. Nemo consequuntur maxime nihil beatae rem?",
+        "grade": "Simplified UX",
+        "speech": "Sanni is a true professional. He took the time to understand our project requirements and provided insightful solutions. The final software delivered was both functional and user-friendly. We are extremely satisfied with their services",
         "project": "Team Collaboration - Software",
         "image": "/assets/img/aliy.png"
     },

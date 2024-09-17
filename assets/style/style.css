@@ -94,15 +94,17 @@ a{
     background-color: var(--main);
     box-shadow: 3px 3px 16px 0px rgb(216, 213, 213) , -9px -9px 18px 0px white;
     border: none;
-    color: var(--red);
     font-weight: medium;
     transition: all 0.3s;
     font-size: 14px;
 }
+.contact-navbar a{
+    color: var(--red);
+}
 .contact-navbar button:hover{
-    transform: translateY(-4px);
-    background: linear-gradient(45deg, purple ,var(--red));
+    transform: translateY(-2px);
     color: white;
+    /* background: linear-gradient(45deg, purple ,var(--red)); */
 }
 .hamburger, .cancel-button{
     color: var(--red);
